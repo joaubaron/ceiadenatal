@@ -1,22 +1,22 @@
 {
-  "name": "Natal sem Estresse · Ceia de Natal",
-  "short_name": "Ceia de Natal",
-  "start_url": "./",
-  "scope": "./",
-  "display": "standalone",
-  "orientation": "landscape",
-  "background_color": "#f9f2dd",
-  "theme_color": "#1c4a33",
-  "icons": [
-    {
-      "src": "icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ]
+"name": "Natal sem Estresse · Ceia de Natal",
+"short_name": "Ceia de Natal",
+"start_url": "/ceiadenatal/",
+"scope": "/ceiadenatal/",
+"display": "standalone",
+"orientation": "landscape",
+"background_color": "#f9f2dd",
+"theme_color": "#1c4a33",
+"icons": [
+{
+"src": "icon-192.png",
+"sizes": "192x192",
+"type": "image/png"
+},
+{
+"src": "icon-512.png",
+"sizes": "512x512",
+"type": "image/png"
+}
+]
 }
