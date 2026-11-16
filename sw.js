@@ -1,4 +1,4 @@
-const CACHE_VERSION = '16.11.2026-1418';
+const CACHE_VERSION = '16.11.2026-1421';
 const CACHE_NAME = `meuchef-${CACHE_VERSION}`;
 const BASE = '/ceiadenatal/';
 const ARQUIVOS = [
