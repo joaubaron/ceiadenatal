@@ -339,12 +339,19 @@ text-decoration: underline;
 text-decoration-color: var(--prata);
 text-underline-offset: 3px;
 cursor: pointer;
+-webkit-tap-highlight-color: transparent;
 }
 
-.btn-ingredientes:hover,
+.btn-ingredientes:focus,
 .btn-ingredientes:focus-visible {
+outline: none;
+}
+
+@media (hover: hover) {
+.btn-ingredientes:hover {
 color: var(--vermelho);
 text-decoration-color: var(--vermelho);
+}
 }
 
 /* Janela de ingredientes */
