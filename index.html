@@ -1,71 +1,41 @@
-var receitas = {
-1: { nome: 'Carpaccio de Salmão Express',
-passos: ['Corte o salmão em fatias finas e arrume no prato.', 'Espalhe a cebola roxa fatiada, as alcaparras e as raspas de limão.', 'Regue com azeite e tempere com sal e pimenta.', 'Coloque a rúcula por cima e sirva.'],
-itens: ['Salmão fresco em fatias', 'Azeite', 'Limão (raspas)', 'Alcaparras', 'Cebola roxa', 'Rúcula', 'Sal', 'Pimenta'] },
-2: { nome: 'Tábua de Frios Natalina',
-passos: ['Fatie os queijos e os salames.', 'Lave as uvas.', 'Arrume tudo na tábua.', 'Coloque o mel e as nozes.'],
-itens: ['Queijo brie', 'Queijo gouda', 'Salames', 'Uvas frescas', 'Mel', 'Nozes'] },
-3: { nome: 'Bruschetta de Pera e Gorgonzola',
-passos: ['Toste o pão com um fio de azeite.', 'Coloque a pera fatiada e o gorgonzola.', 'Espalhe as nozes picadas.', 'Leve ao forno até o queijo derreter.'],
-itens: ['Pão italiano', 'Azeite', 'Pera', 'Gorgonzola', 'Nozes'] },
-4: { nome: 'Camarão Empanado Crocante',
-passos: ['Empane o camarão em farinha panko.', 'Coloque o camarão na airfryer.', 'Misture a maionese com o alho e a páprica defumada.', 'Sirva o camarão com a maionese.'],
-itens: ['Camarão empanado congelado', 'Maionese', 'Alho', 'Páprica defumada'] },
-5: { nome: 'Entrecot ao Molho de Vinho',
-passos: ['Grelhe os bifes na frigideira com azeite e reserve.', 'Na mesma panela, ferva o vinho tinto raspando o fundo.', 'Junte a manteiga e misture.', 'Sirva os bifes com o molho e o purê de batata baroa.'],
-itens: ['Bifes de entrecot', 'Azeite', 'Vinho tinto', 'Manteiga', 'Batata baroa (para o purê)'] },
-6: { nome: 'Vagem Salteada com Amêndoas',
-passos: ['Derreta a manteiga na frigideira.', 'Salteie o alho e a vagem.', 'Tempere com sal e pimenta.', 'Finalize com as amêndoas e o manjericão.'],
-itens: ['Vagem', 'Manteiga', 'Alho', 'Amêndoas laminadas', 'Manjericão', 'Sal', 'Pimenta'] },
-7: { nome: 'Panacota com Calda de Ameixa',
-passos: ['Aqueça o creme de leite, o leite, o leite de coco e o açúcar.', 'Misture a gelatina dissolvida em um pouco de água.', 'Coloque nas taças e leve à geladeira por 2 horas.', 'Cozinhe as ameixas com açúcar e limão até engrossar.', 'Sirva a panacota com a calda e pedaços de ameixa.'],
-itens: ['Creme de leite fresco', 'Leite', 'Leite de coco', 'Açúcar', 'Gelatina sem sabor', 'Ameixas frescas', 'Limão'] }
-};
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Cardápio de Natal com pratos rápidos.">
+<meta name="theme-color" content="#1c4a33">
+<title>Cardápio de Natal</title>
+<!-- Fontes -->
+<link rel="manifest" href="manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 
-var modal = document.getElementById('modal');
-var titulo = document.getElementById('modal-titulo');
-var passos = document.getElementById('modal-passos');
-var lista = document.getElementById('modal-lista');
-var botaoFechar = document.getElementById('modal-fechar');
-var ultimoBotao = null;
-
-function preencher(ul, textos) {
-ul.innerHTML = '';
-textos.forEach(function (t) {
-var li = document.createElement('li');
-li.textContent = t;
-ul.appendChild(li);
-});
+<style>
+/* Paleta de Natal: vermelho, verde, dourado, branco e prata */
+:root {
+--vermelho: #b3202a;
+--verde-natal: #1c4a33;
+--dourado: #b89b5e;
+--branco: #ffffff;
+--prata: #c0c4c8;
+--prata-claro: #e6e8ea;
+--prata-escuro: #6b7075;
+--texto-escuro: #1c4a33;
+--texto-claro: #6b7075;
+--fundo: #ffffff;
 }
 
-function abrir(id, botao) {
-var r = receitas[id];
-if (!r) return;
-ultimoBotao = botao;
-titulo.textContent = r.nome;
-preencher(passos, r.passos);
-preencher(lista, r.itens);
-modal.classList.add('aberto');
-document.body.style.overflow = 'hidden';
-botaoFechar.focus();
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
 
-function fechar() {
-modal.classList.remove('aberto');
-document.body.style.overflow = '';
-if (ultimoBotao) ultimoBotao.focus();
-}
-
-document.querySelectorAll('.btn-ingredientes').forEach(function (b) {
-b.addEventListener('click', function () { abrir(b.getAttribute('data-receita'), b); });
-});
-botaoFechar.addEventListener('click', fechar);
-modal.addEventListener('click', function (e) { if (e.target === modal) fechar(); });
-document.addEventListener('keydown', function (e) {
-if (e.key === 'Escape' && modal.classList.contains('aberto')) fechar();
-});
-})();
-</script>
-
-</body>
-</html>
+body {
+background-color: #ffffff;
+font-family: 'Montserrat', Arial, sans-serif;
+color: var(--texto-escuro);
+display: flex;
+justify-content: center;
