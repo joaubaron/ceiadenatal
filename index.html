@@ -438,7 +438,7 @@ aproveitar a noite!
 
 <!-- Seção Sobremesas -->
 <div class="section-title">
-<h2>Doces</h2>
+<h2>Sobremesa</h2>
 </div>
 
 <p class="secao-bebida">🍷 <b>Servir com:</b> Espumante moscatel</p>
@@ -446,26 +446,15 @@ aproveitar a noite!
 <div class="grid-menu">
 <div class="menu-item">
 <div class="item-header">
-<div class="item-name">Taça de Morangos ao Vinho</div>
+<div class="item-name">Panacota com Calda de Ameixa</div>
 </div>
-<div class="item-desc">Morangos frescos com iogurte. Calda de vinho tinto doce, açúcar e canela, fervida até engrossar. Deixe esfriar e sirva sobre os morangos com chantilly pronto.</div>
-<div class="item-tag">⏱️ 25 minutos ✦ Esfriar ✦ Faça antes</div>
+<div class="item-desc">Panacota cremosa servida gelada com calda de ameixa. Calda de ameixas frescas com açúcar e um toque de limão, cozida até engrossar. Deixe esfriar e sirva sobre a panacota.</div>
+<div class="item-tag">⏱️ 2 horas ✦ Gelar ✦ Faça antes</div>
 <figure class="foto-prato foto-7">
-<img src="fotos/foto7.webp" alt="Taça de Morangos ao Vinho" width="1000" height="750" loading="lazy">
+<img src="fotos/foto7.webp" alt="Panacota com calda de ameixa em taça, servida gelada" width="1000" height="750" loading="lazy">
 </figure>
 </div>
-
-<div class="menu-item">
-<div class="item-header">
-<div class="item-name">Mousse Rápida de Chocolate</div>
-</div>
-<div class="item-desc">Derreta chocolate meio amargo no micro-ondas e deixe amornar. Misture com creme de leite gelado e bata bem. Deixe 2 horas na geladeira. Faça na véspera.</div>
-<div class="item-tag">⏱️ 10 minutos ✦ 2 horas na geladeira</div>
-<figure class="foto-prato foto-8">
-<img src="fotos/foto8.webp" alt="Mousse Rápida de Chocolate" width="1000" height="750" loading="lazy">
-</figure>
-</div>
-</div>
+</div>>
 
 <footer>
 <p class="footer-text">"O melhor tempero do Natal é a presença de todos."</p>
@@ -477,34 +466,34 @@ aproveitar a noite!
 
 <script>
 (function () {
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-  var caixa = document.getElementById('enfeites');
-  var formas = ['❄', '❅', '✦', '✧', '•'];
-  var cores = ['#b89b5e', '#c0c4c8', '#1c4a33', '#b3202a'];
-  var total = window.matchMedia('(max-width: 768px)').matches ? 12 : 22;
+var caixa = document.getElementById('enfeites');
+var formas = ['❄', '❅', '✦', '✧', '•'];
+var cores = ['#b89b5e', '#c0c4c8', '#1c4a33', '#b3202a'];
+var total = window.matchMedia('(max-width: 768px)').matches ? 12 : 22;
 
-  function sorteia(min, max) {
-    return Math.random() * (max - min) + min;
-  }
+function sorteia(min, max) {
+return Math.random() * (max - min) + min;
+}
 
-  for (var i = 0; i < total; i++) {
-    var e = document.createElement('span');
-    e.className = 'enfeite';
-    e.textContent = formas[Math.floor(Math.random() * formas.length)];
+for (var i = 0; i < total; i++) {
+var e = document.createElement('span');
+e.className = 'enfeite';
+e.textContent = formas[Math.floor(Math.random() * formas.length)];
 
-    var duracao = sorteia(16, 30);
-    e.style.setProperty('--x', sorteia(0, 100).toFixed(1) + 'vw');
-    e.style.setProperty('--s', sorteia(9, 18).toFixed(0) + 'px');
-    e.style.setProperty('--c', cores[Math.floor(Math.random() * cores.length)]);
-    e.style.setProperty('--o', sorteia(0.14, 0.32).toFixed(2));
-    e.style.setProperty('--d', duracao.toFixed(1) + 's');
-    e.style.setProperty('--delay', (-sorteia(0, duracao)).toFixed(1) + 's');
-    e.style.setProperty('--vai', sorteia(-40, 40).toFixed(0) + 'px');
-    e.style.setProperty('--giro', sorteia(-180, 180).toFixed(0) + 'deg');
+var duracao = sorteia(16, 30);
+e.style.setProperty('--x', sorteia(0, 100).toFixed(1) + 'vw');
+e.style.setProperty('--s', sorteia(9, 18).toFixed(0) + 'px');
+e.style.setProperty('--c', cores[Math.floor(Math.random() * cores.length)]);
+e.style.setProperty('--o', sorteia(0.14, 0.32).toFixed(2));
+e.style.setProperty('--d', duracao.toFixed(1) + 's');
+e.style.setProperty('--delay', (-sorteia(0, duracao)).toFixed(1) + 's');
+e.style.setProperty('--vai', sorteia(-40, 40).toFixed(0) + 'px');
+e.style.setProperty('--giro', sorteia(-180, 180).toFixed(0) + 'deg');
 
-    caixa.appendChild(e);
-  }
+caixa.appendChild(e);
+}
 })();
 </script>
 
