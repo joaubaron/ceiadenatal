@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Lista de compras da ceia de Natal.">
+<meta name="theme-color" content="#1c4a33">
+<title>Mercado · Ceia de Natal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+<style>
+:root {
+--vermelho: #b3202a;
+--verde-natal: #1c4a33;
+--dourado: #b89b5e;
+--prata: #c0c4c8;
+--prata-escuro: #6b7075;
+--texto-claro: #6b7075;
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+background-color: #ffffff;
+font-family: 'Montserrat', Arial, sans-serif;
+color: var(--verde-natal);
+display: flex;
+justify-content: center;
+padding: 1rem;
+}
+
+.menu-container {
+background-color: #f9f2dd;
+background-image: url("data:image/webp;base64,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");
+background-size: 400px 400px;
+background-repeat: repeat;
+max-width: 700px;
+width: 100%;
+padding: 2rem 3rem;
+box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+border-top: 6px solid var(--vermelho);
+}
+
+/* Voltar: mesmo estilo do botão Fechar */
+.link-voltar {
+display: inline-block;
+padding: 0.3rem 0.5rem 0.3rem 0;
+font-family: 'Playfair Display', Georgia, serif;
+font-size: 0.85rem;
+font-weight: 600;
+letter-spacing: 0.5px;
+color: var(--verde-natal);
+text-decoration: none;
+text-align: left;
+}
+
+.link-voltar:focus-visible {
+outline: 2px solid var(--dourado);
+outline-offset: 3px;
+}
+
+h1 {
+font-family: 'Playfair Display', Georgia, serif;
+font-size: 2.2rem;
+font-weight: 600;
+letter-spacing: 3px;
+text-transform: uppercase;
+text-align: center;
+margin: 1.5rem 0 0.4rem;
+}
+
+.sub {
+font-family: 'Great Vibes', 'Brush Script MT', cursive;
+font-size: 3.2rem;
+margin-top: 1.5rem;
+color: var(--vermelho);
+text-align: center;
+line-height: 1;
+}
+
+/* Título de cada grupo */
+.grupo-titulo {
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 3rem 0 1.8rem;
+}
+
+.grupo-titulo::before,
+.grupo-titulo::after {
+content: '';
+flex: 1;
+height: 1px;
+background-color: var(--dourado);
+opacity: 0.6;
+}
+
+.grupo-titulo h2 {
+font-family: 'Great Vibes', 'Brush Script MT', cursive;
+font-size: 3rem;
+font-weight: 400;
+color: var(--vermelho);
+padding: 0 1.5rem;
+text-align: center;
+}
+
+/* Lista */
+ul {
+list-style: none;
+}
+
+li {
+display: flex;
+align-items: baseline;
+gap: 0.6rem;
+padding: 0.55rem 0;
+font-size: 1.15rem;
+line-height: 1.35;
+}
+
+li .nome {
+font-family: 'Playfair Display', Georgia, serif;
+font-weight: 600;
+}
+
+li .pontos {
+flex: 1;
+border-bottom: 1px dotted var(--dourado);
+transform: translateY(-0.25rem);
+min-width: 1rem;
+}
+
+li .preco {
+white-space: nowrap;
+font-weight: 600;
+}
+
+li.bebida {
+color: var(--prata-escuro);
+font-size: 1rem;
+}
+
+li.bebida .nome {
+font-family: 'Montserrat', Arial, sans-serif;
+font-weight: 400;
+}
+
+.total {
+display: flex;
+justify-content: space-between;
+align-items: baseline;
+margin-top: 1rem;
+padding-top: 0.9rem;
+border-top: 1px solid var(--dourado);
+font-family: 'Playfair Display', Georgia, serif;
+font-size: 1.35rem;
+font-weight: 600;
+}
+
+footer {
+margin-top: 4rem;
+padding-top: 2rem;
+border-top: 1px solid var(--prata);
+text-align: center;
+}
+
+.footer-text {
+font-family: 'Playfair Display', Georgia, serif;
+font-style: italic;
+font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+.menu-container { padding: 1.5rem; }
+h1 { font-size: 1.8rem; }
+.grupo-titulo h2 { font-size: 2.4rem; padding: 0 1rem; }
+li { font-size: 1.1rem; }
+}
+</style>
+</head>
+<body>
+
+<div class="menu-container">
+
+<a class="link-voltar" href="index.html">Voltar ao cardápio</a>
+
+<p class="sub">Ceia de Natal</p>
+
+<div class="grupo-titulo">
+<h2>Entradas</h2>
+</div>
+
+<ul>
+<li><span class="nome">Carpaccio de Salmão</span><span class="pontos"></span><span class="preco">R$ 70,00</span></li>
+<li><span class="nome">Tábua de Frios</span><span class="pontos"></span><span class="preco">R$ 100,00</span></li>
+<li><span class="nome">Bruschetta de Pera e Gorgonzola</span><span class="pontos"></span><span class="preco">R$ 50,00</span></li>
+<li class="bebida"><span class="nome">🍷 Espumante brut</span></li>
+</ul>
+
+<div class="total"><span>Total</span><span>R$ 220,00</span></div>
+
+<div class="grupo-titulo">
+<h2>Jantar e sobremesa</h2>
+</div>
+
+<ul>
+<li><span class="nome">Entrecot ao Molho de Vinho</span><span class="pontos"></span><span class="preco">R$ 130,00</span></li>
+<li><span class="nome">Vagem Salteada com Amêndoas</span><span class="pontos"></span><span class="preco">R$ 25,00</span></li>
+<li><span class="nome">Ganache de Chocolate</span><span class="pontos"></span><span class="preco">R$ 35,00</span></li>
+<li class="bebida"><span class="nome">🍷 Vinho tinto</span></li>
+<li class="bebida"><span class="nome">🍷 Espumante moscatel</span></li>
+</ul>
+
+<div class="total"><span>Total</span><span>R$ 190,00</span></div>
+
+<footer>
+<p class="footer-text">"O melhor tempero do Natal é a presença de todos."</p>
+</footer>
+
+</div>
+
+</body>
+</html>
