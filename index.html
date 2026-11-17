@@ -440,6 +440,25 @@ text-decoration-color: var(--dourado);
 text-underline-offset: 4px;
 }
 
+.link-mercado {
+  display: inline-block;
+  padding: 0.3rem 0.5rem;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0.5px;
+  color: var(--verde-natal);
+  text-decoration: none;
+  text-align: left;
+}
+
+.link-mercado:hover,
+.link-mercado:focus-visible {
+  text-decoration: underline;
+  text-decoration-color: var(--dourado);
+  text-underline-offset: 4px;
+}
 
 .modal-caixa ol {
 list-style: none;
@@ -589,9 +608,7 @@ aproveitar a noite!
 
 <br><br>
 
-<p style="text-align: center;">
-  <a href="README.md">🛒 Mercado</a>
-</p>
+<a class="link-mercado" href="README.md">🛒 Mercado</a>
 
 </div>
 
