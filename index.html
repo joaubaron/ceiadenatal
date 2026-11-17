@@ -709,7 +709,8 @@ preencher(passos, r.passos);
 preencher(lista, r.itens);
 modal.classList.add('aberto');
 document.body.style.overflow = 'hidden';
-botaoFechar.focus();
+modal.querySelector('.modal-caixa').scrollTop = 0;
+botaoFechar.focus({ preventScroll: true });
 }
 
 function fechar() {
