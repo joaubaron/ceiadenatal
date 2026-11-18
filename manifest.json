@@ -4,7 +4,6 @@
 "start_url": "/ceiadenatal/",
 "scope": "/ceiadenatal/",
 "display": "standalone",
-"orientation": "landscape",
 "background_color": "#f9f2dd",
 "theme_color": "#1c4a33",
 "icons": [
