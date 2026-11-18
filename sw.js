@@ -1,5 +1,6 @@
 const CACHE_VERSION = '18.11.2026-0903';
-const CACHE_NAME = `meuchef-${CACHE_VERSION}`;
+const CACHE_PREFIX = 'ceiadenatal-';
+const CACHE = CACHE_PREFIX + CACHE_VERSION;
 const BASE = '/ceiadenatal/';
 const ARQUIVOS = [
 BASE,
@@ -28,7 +29,7 @@ Promise.all(ARQUIVOS.map((u) => c.add(u).catch(() => {})))
 self.addEventListener('activate', (e) => {
 e.waitUntil(
 caches.keys().then((ks) =>
-Promise.all(ks.filter((k) => k !== CACHE).map((k) => caches.delete(k)))
+Promise.all(ks.filter((k) => k.startsWith(CACHE_PREFIX) && k !== CACHE).map((k) => caches.delete(k)))
 ).then(() => self.clients.claim())
 );
 });
