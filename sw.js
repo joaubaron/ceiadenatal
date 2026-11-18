@@ -1,4 +1,4 @@
-const CACHE_VERSION = '18.11.2026-0903';
+const CACHE_VERSION = '18.11.2026-1115';
 const CACHE_PREFIX = 'ceiadenatal-';
 const CACHE = CACHE_PREFIX + CACHE_VERSION;
 const BASE = '/ceiadenatal/';
