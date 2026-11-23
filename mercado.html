@@ -419,7 +419,7 @@ caixa.appendChild(ul);
 function desenharPorReceita() {
 Object.keys(RECEITAS).forEach(function (id) {
 var r = RECEITAS[id];
-caixa.appendChild(criarTitulo(r.nome));
+caixa.appendChild(criarTitulo(r.preco ? r.nome + ' · ' + r.preco : r.nome));
 var ul = el('ul');
 r.itens.forEach(function (i) {
 ul.appendChild(criarItem(i.n, formatarQtd(i.q, i.u), i.obs || ''));
