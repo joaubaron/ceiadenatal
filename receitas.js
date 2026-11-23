@@ -89,7 +89,7 @@ function formatarQtd(q, u) {
   return txt + ' ' + (q > 1 ? nome[1] : nome[0]);
 }
 
-// Texto que aparece ao lado do ingrediente na janela das receitas
+// Texto que aparece ao lado do ingrediente na janela da receita
 function detalheItem(i) {
   return '- ' + (i.obs ? '(' + i.obs + ') - ' : '') + formatarQtd(i.q, i.u);
 }
