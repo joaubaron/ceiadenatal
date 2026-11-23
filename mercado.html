@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Lista de compras da ceia de Natal.">
 <meta name="theme-color" content="#1c4a33">
-<title>Mercado · Ceia de Natal</title>
+<title>Lista de compras · Ceia de Natal</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
@@ -191,6 +191,97 @@ h1 { font-size: 1.8rem; }
 .grupo-titulo h2 { font-size: 1.9rem; padding: 0 1rem; }
 li { font-size: 0.88rem; }
 }
+
+/* Lista de compras */
+.progresso {
+font-size: 0.8rem;
+color: var(--prata-escuro);
+text-align: center;
+margin-top: 0.4rem;
+}
+
+.btn-limpar {
+display: block;
+margin: 0.6rem auto 0;
+background: none;
+border: none;
+padding: 0.3rem 0.5rem;
+font-family: 'Playfair Display', Georgia, serif;
+font-size: 0.85rem;
+font-weight: 600;
+letter-spacing: 0.5px;
+color: var(--verde-natal);
+cursor: pointer;
+-webkit-tap-highlight-color: transparent;
+}
+
+.btn-limpar:focus { outline: none; }
+
+li.item-lista { padding: 0; }
+
+.item-lista label {
+display: flex;
+align-items: baseline;
+gap: 0.6rem;
+width: 100%;
+padding: 0.55rem 0;
+cursor: pointer;
+-webkit-tap-highlight-color: transparent;
+}
+
+.item-lista input {
+-webkit-appearance: none;
+appearance: none;
+flex: none;
+width: 18px;
+height: 18px;
+margin: 0;
+position: relative;
+top: 3px;
+border: 1.5px solid var(--dourado);
+background: #fff;
+cursor: pointer;
+}
+
+.item-lista input:checked {
+background: var(--verde-natal);
+border-color: var(--verde-natal);
+}
+
+.item-lista input:checked::after {
+content: '✓';
+position: absolute;
+inset: 0;
+color: #fff;
+font-size: 13px;
+line-height: 16px;
+text-align: center;
+}
+
+.item-lista input:focus-visible {
+outline: 2px solid var(--dourado);
+outline-offset: 2px;
+}
+
+.item-lista .texto { display: flex; flex-direction: column; }
+
+.item-lista .usado {
+font-family: 'Montserrat', Arial, sans-serif;
+font-size: 0.72rem;
+color: var(--texto-claro);
+}
+
+.item-lista .qtd {
+font-weight: 600;
+text-align: right;
+max-width: 50%;
+}
+
+.item-lista.feito .texto,
+.item-lista.feito .qtd {
+text-decoration: line-through;
+opacity: 0.45;
+}
 </style>
 </head>
 <body>
@@ -201,39 +292,96 @@ li { font-size: 0.88rem; }
 
 <p class="sub">Ceia de Natal</p>
 <p class="pessoas">Jantar para 5 pessoas</p>
+<p class="progresso" id="progresso"></p>
+<button type="button" class="btn-limpar" id="limpar">Desmarcar tudo</button>
 
-<div class="grupo-titulo">
-<h2>Entradas</h2>
-</div>
-
-<ul>
-<li><span class="nome">Carpaccio de Salmão</span><span class="pontos"></span><span class="preco">R$ 90,00</span></li>
-<li><span class="nome">Tábua de Frios</span><span class="pontos"></span><span class="preco">R$ 110,00</span></li>
-<li><span class="nome">Bruschetta de Pera e Gorgonzola</span><span class="pontos"></span><span class="preco">R$ 50,00</span></li>
-<li class="bebida"><span class="nome">🍷 Espumante brut</span></li>
-</ul>
-
-<div class="total"><span>Total</span><span>R$ 250,00</span></div>
-
-<div class="grupo-titulo">
-<h2>Jantar e sobremesa</h2>
-</div>
-
-<ul>
-<li><span class="nome">Entrecot ao Molho de Vinho</span><span class="pontos"></span><span class="preco">R$ 140,00</span></li>
-<li><span class="nome">Vagem Salteada com Amêndoas</span><span class="pontos"></span><span class="preco">R$ 40,00</span></li>
-<li><span class="nome">Ganache de Chocolate</span><span class="pontos"></span><span class="preco">R$ 40,00</span></li>
-<li class="bebida"><span class="nome">🍷 Vinho tinto</span></li>
-<li class="bebida"><span class="nome">🍷 Espumante moscatel</span></li>
-</ul>
-
-<div class="total"><span>Total</span><span>R$ 220,00</span></div>
+<div id="lista"></div>
 
 <footer>
 <p class="footer-text">"O melhor tempero do Natal é a presença de todos."</p>
 </footer>
 
 </div>
+
+<script src="receitas.js"></script>
+<script>
+(function () {
+var CHAVE = 'ceia-mercado-v1';
+var ORDEM = ['Carnes e peixes', 'Frios e laticínios', 'Hortifrúti', 'Mercearia', 'Bebidas'];
+var marcados = {};
+
+try { marcados = JSON.parse(localStorage.getItem(CHAVE)) || {}; } catch (e) { marcados = {}; }
+
+function salvar() {
+try { localStorage.setItem(CHAVE, JSON.stringify(marcados)); } catch (e) {}
+}
+
+function el(tag, classe, texto) {
+var x = document.createElement(tag);
+if (classe) x.className = classe;
+if (texto) x.textContent = texto;
+return x;
+}
+
+var grupos = juntarItens();
+var caixa = document.getElementById('lista');
+var progresso = document.getElementById('progresso');
+var total = 0;
+
+function atualizar() {
+var feitos = Object.keys(marcados).filter(function (k) { return marcados[k]; }).length;
+progresso.textContent = feitos + ' de ' + total + ' itens';
+}
+
+ORDEM.forEach(function (cat) {
+if (!grupos[cat]) return;
+
+var titulo = el('div', 'grupo-titulo');
+titulo.appendChild(el('h2', '', cat));
+caixa.appendChild(titulo);
+
+var ul = el('ul');
+grupos[cat].forEach(function (item) {
+total++;
+var li = el('li', 'item-lista');
+var label = el('label');
+var caixinha = document.createElement('input');
+caixinha.type = 'checkbox';
+caixinha.checked = !!marcados[item.nome];
+li.classList.toggle('feito', caixinha.checked);
+
+var texto = el('span', 'texto');
+texto.appendChild(el('span', 'nome', item.nome));
+if (item.usado) texto.appendChild(el('small', 'usado', item.usado));
+
+label.appendChild(caixinha);
+label.appendChild(texto);
+label.appendChild(el('span', 'pontos'));
+if (item.qtd) label.appendChild(el('span', 'qtd', item.qtd));
+li.appendChild(label);
+ul.appendChild(li);
+
+caixinha.addEventListener('change', function () {
+if (caixinha.checked) marcados[item.nome] = true; else delete marcados[item.nome];
+li.classList.toggle('feito', caixinha.checked);
+salvar();
+atualizar();
+});
+});
+caixa.appendChild(ul);
+});
+
+document.getElementById('limpar').addEventListener('click', function () {
+marcados = {};
+salvar();
+caixa.querySelectorAll('input').forEach(function (c) { c.checked = false; });
+caixa.querySelectorAll('.item-lista').forEach(function (l) { l.classList.remove('feito'); });
+atualizar();
+});
+
+atualizar();
+})();
+</script>
 
 </body>
 </html>
