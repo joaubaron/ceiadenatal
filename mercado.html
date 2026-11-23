@@ -282,6 +282,35 @@ max-width: 50%;
 text-decoration: line-through;
 opacity: 0.45;
 }
+
+.modos {
+display: flex;
+justify-content: center;
+gap: 1.2rem;
+margin-top: 0.8rem;
+}
+
+.btn-modo {
+background: none;
+border: none;
+padding: 0.3rem 0.2rem;
+font-family: 'Playfair Display', Georgia, serif;
+font-size: 0.85rem;
+font-weight: 600;
+letter-spacing: 0.5px;
+color: var(--prata-escuro);
+cursor: pointer;
+-webkit-tap-highlight-color: transparent;
+}
+
+.btn-modo:focus { outline: none; }
+
+.btn-modo.ativo {
+color: var(--verde-natal);
+text-decoration: underline;
+text-decoration-color: var(--dourado);
+text-underline-offset: 5px;
+}
 </style>
 </head>
 <body>
@@ -293,6 +322,10 @@ opacity: 0.45;
 <p class="sub">Ceia de Natal</p>
 <p class="pessoas">Jantar para 5 pessoas</p>
 <p class="progresso" id="progresso"></p>
+<div class="modos">
+<button type="button" class="btn-modo" data-modo="corredor">Por corredor</button>
+<button type="button" class="btn-modo" data-modo="receita">Por receita</button>
+</div>
 <button type="button" class="btn-limpar" id="limpar">Desmarcar tudo</button>
 
 <div id="lista"></div>
@@ -307,10 +340,13 @@ opacity: 0.45;
 <script>
 (function () {
 var CHAVE = 'ceia-mercado-v1';
+var CHAVE_MODO = 'ceia-mercado-modo';
 var ORDEM = ['Carnes e peixes', 'Frios e laticínios', 'Hortifrúti', 'Mercearia', 'Bebidas'];
 var marcados = {};
+var modo = 'corredor';
 
 try { marcados = JSON.parse(localStorage.getItem(CHAVE)) || {}; } catch (e) { marcados = {}; }
+try { modo = localStorage.getItem(CHAVE_MODO) === 'receita' ? 'receita' : 'corredor'; } catch (e) {}
 
 function salvar() {
 try { localStorage.setItem(CHAVE, JSON.stringify(marcados)); } catch (e) {}
@@ -327,59 +363,108 @@ var grupos = juntarItens();
 var caixa = document.getElementById('lista');
 var progresso = document.getElementById('progresso');
 var total = 0;
+ORDEM.forEach(function (c) { if (grupos[c]) total += grupos[c].length; });
 
 function atualizar() {
 var feitos = Object.keys(marcados).filter(function (k) { return marcados[k]; }).length;
 progresso.textContent = feitos + ' de ' + total + ' itens';
 }
 
-ORDEM.forEach(function (cat) {
-if (!grupos[cat]) return;
-
-var titulo = el('div', 'grupo-titulo');
-titulo.appendChild(el('h2', '', cat));
-caixa.appendChild(titulo);
-
-var ul = el('ul');
-grupos[cat].forEach(function (item) {
-total++;
+// Uma linha da lista
+function criarItem(nome, qtd, sub) {
 var li = el('li', 'item-lista');
+li.setAttribute('data-nome', nome);
 var label = el('label');
 var caixinha = document.createElement('input');
 caixinha.type = 'checkbox';
-caixinha.checked = !!marcados[item.nome];
+caixinha.checked = !!marcados[nome];
 li.classList.toggle('feito', caixinha.checked);
 
 var texto = el('span', 'texto');
-texto.appendChild(el('span', 'nome', item.nome));
-if (item.usado) texto.appendChild(el('small', 'usado', item.usado));
+texto.appendChild(el('span', 'nome', nome));
+if (sub) texto.appendChild(el('small', 'usado', sub));
 
 label.appendChild(caixinha);
 label.appendChild(texto);
 label.appendChild(el('span', 'pontos'));
-if (item.qtd) label.appendChild(el('span', 'qtd', item.qtd));
+if (qtd) label.appendChild(el('span', 'qtd', qtd));
 li.appendChild(label);
-ul.appendChild(li);
 
 caixinha.addEventListener('change', function () {
-if (caixinha.checked) marcados[item.nome] = true; else delete marcados[item.nome];
-li.classList.toggle('feito', caixinha.checked);
+if (caixinha.checked) marcados[nome] = true; else delete marcados[nome];
+// o mesmo item pode aparecer em mais de uma receita: marca todos
+caixa.querySelectorAll('.item-lista').forEach(function (outro) {
+if (outro.getAttribute('data-nome') !== nome) return;
+outro.querySelector('input').checked = caixinha.checked;
+outro.classList.toggle('feito', caixinha.checked);
+});
 salvar();
 atualizar();
 });
+return li;
+}
+
+function criarTitulo(texto) {
+var t = el('div', 'grupo-titulo');
+t.appendChild(el('h2', '', texto));
+return t;
+}
+
+function desenharPorCorredor() {
+ORDEM.forEach(function (cat) {
+if (!grupos[cat]) return;
+caixa.appendChild(criarTitulo(cat));
+var ul = el('ul');
+grupos[cat].forEach(function (item) {
+ul.appendChild(criarItem(item.nome, item.qtd, item.usado));
 });
 caixa.appendChild(ul);
+});
+}
+
+function desenharPorReceita() {
+Object.keys(RECEITAS).forEach(function (id) {
+var r = RECEITAS[id];
+caixa.appendChild(criarTitulo(r.nome));
+var ul = el('ul');
+r.itens.forEach(function (i) {
+ul.appendChild(criarItem(i.n, formatarQtd(i.q, i.u), i.obs || ''));
+});
+caixa.appendChild(ul);
+});
+caixa.appendChild(criarTitulo('Bebidas'));
+var ub = el('ul');
+BEBIDAS.forEach(function (b) {
+ub.appendChild(criarItem(b.n, '', b.obs));
+});
+caixa.appendChild(ub);
+}
+
+function desenhar() {
+caixa.innerHTML = '';
+if (modo === 'receita') desenharPorReceita(); else desenharPorCorredor();
+document.querySelectorAll('.btn-modo').forEach(function (b) {
+b.classList.toggle('ativo', b.getAttribute('data-modo') === modo);
+});
+atualizar();
+}
+
+document.querySelectorAll('.btn-modo').forEach(function (b) {
+b.addEventListener('click', function () {
+modo = b.getAttribute('data-modo');
+try { localStorage.setItem(CHAVE_MODO, modo); } catch (e) {}
+desenhar();
+window.scrollTo(0, 0);
+});
 });
 
 document.getElementById('limpar').addEventListener('click', function () {
 marcados = {};
 salvar();
-caixa.querySelectorAll('input').forEach(function (c) { c.checked = false; });
-caixa.querySelectorAll('.item-lista').forEach(function (l) { l.classList.remove('feito'); });
-atualizar();
+desenhar();
 });
 
-atualizar();
+desenhar();
 })();
 </script>
 
