@@ -98,6 +98,7 @@ margin-top: 0;
 display: flex;
 align-items: center;
 justify-content: center;
+flex-wrap: wrap;
 margin: 3rem 0 1.8rem;
 }
 
@@ -117,6 +118,17 @@ font-weight: 400;
 color: var(--vermelho);
 padding: 0 1.5rem;
 text-align: center;
+flex: 0 0 100%;
+order: -1;
+}
+
+.grupo-titulo .preco-titulo {
+flex: 0 0 100%;
+font-family: 'Montserrat', Arial, sans-serif;
+font-size: 0.72rem;
+color: var(--texto-claro);
+text-align: center;
+margin-top: -0.3rem;
 }
 
 /* Lista */
@@ -398,9 +410,10 @@ salvar();
 return li;
 }
 
-function criarTitulo(texto) {
+function criarTitulo(texto, preco) {
 var t = el('div', 'grupo-titulo');
 t.appendChild(el('h2', '', texto));
+if (preco) t.appendChild(el('div', 'preco-titulo', preco));
 return t;
 }
 
@@ -419,7 +432,7 @@ caixa.appendChild(ul);
 function desenharPorReceita() {
 Object.keys(RECEITAS).forEach(function (id) {
 var r = RECEITAS[id];
-caixa.appendChild(criarTitulo(r.preco ? r.nome + ' · ' + r.preco : r.nome));
+caixa.appendChild(criarTitulo(r.nome, r.preco));
 var ul = el('ul');
 r.itens.forEach(function (i) {
 ul.appendChild(criarItem(i.n, formatarQtd(i.q, i.u), i.obs || ''));
