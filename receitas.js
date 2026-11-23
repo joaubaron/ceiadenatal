@@ -74,8 +74,8 @@ var RECEITAS = {
 
 // Bebidas para servir (não entram nas receitas)
 var BEBIDAS = [
-  { n: 'Espumante brut', obs: 'Entrada' },
-  { n: 'Vinho tinto', obs: 'Jantar' },
+  { n: 'Vinho branco seco', obs: 'Entrada' },
+  { n: 'Vinho tinto seco', obs: 'Jantar' },
   { n: 'Espumante', obs: 'Sobremesa' }
 ];
 
