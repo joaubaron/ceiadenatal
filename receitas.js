@@ -67,7 +67,7 @@ var RECEITAS = {
     passos: ['Pique o chocolate em pedaços.', 'Aqueça o creme de leite na panela, sem ferver.', 'Com o creme bem quente, coloque o chocolate e misture até derreter.', 'Distribua nos bowls e leve à geladeira.', 'Sirva com morangos e raspas de chocolate.'],
     itens: [
       { n: 'Chocolate meio amargo', q: 150, u: 'g', c: 'Mercearia' },
-      { n: 'Creme de leite', q: 150, u: 'ml', obs: 'de caixinha ou fresco, aquecido', c: 'Frios e laticínios' },
+      { n: 'Creme de leite', q: 150, u: 'ml', obs: 'uma caixinha, aquecido', c: 'Frios e laticínios' },
       { n: 'Morangos', q: 250, u: 'g', obs: 'para acompanhar', c: 'Hortifrúti' }
     ] }
 };
