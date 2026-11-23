@@ -76,7 +76,7 @@ var RECEITAS = {
 var BEBIDAS = [
   { n: 'Espumante brut', obs: 'Entrada' },
   { n: 'Vinho tinto', obs: 'Jantar' },
-  { n: 'Espumante moscatel', obs: 'Sobremesa' }
+  { n: 'Espumante', obs: 'Sobremesa' }
 ];
 
 // 500 -> "500 g" | 1000 -> "1 kg" | null -> "a gosto"
