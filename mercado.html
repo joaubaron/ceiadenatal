@@ -338,6 +338,7 @@ text-underline-offset: 5px;
 
 <p class="sub">Ceia de Natal</p>
 <p class="pessoas">Jantar para 5 pessoas</p>
+<p class="progresso" id="progresso"></p>
 <div class="modos">
 <button type="button" class="btn-modo" data-modo="receita">🍳 Receita</button>
 <button type="button" class="btn-modo" data-modo="corredor">🛒 Corredor</button>
@@ -378,6 +379,18 @@ return x;
 var grupos = juntarItens();
 var caixa = document.getElementById('lista');
 
+// Nomes únicos (o mesmo item em várias receitas conta uma vez só)
+var nomes = {};
+Object.keys(grupos).forEach(function (cat) {
+grupos[cat].forEach(function (i) { nomes[i.nome] = true; });
+});
+var totalItens = Object.keys(nomes).length;
+
+function atualizarProgresso() {
+var feitos = Object.keys(marcados).filter(function (k) { return nomes[k]; }).length;
+document.getElementById('progresso').textContent = feitos + ' de ' + totalItens + ' itens marcados';
+}
+
 
 // Uma linha da lista
 function criarItem(nome, qtd, sub) {
@@ -408,6 +421,7 @@ outro.querySelector('input').checked = caixinha.checked;
 outro.classList.toggle('feito', caixinha.checked);
 });
 salvar();
+atualizarProgresso();
 });
 return li;
 }
@@ -455,6 +469,7 @@ if (modo === 'receita') desenharPorReceita(); else desenharPorCorredor();
 document.querySelectorAll('.btn-modo[data-modo]').forEach(function (b) {
 b.classList.toggle('ativo', b.getAttribute('data-modo') === modo);
 });
+atualizarProgresso();
 }
 
 document.querySelectorAll('.btn-modo[data-modo]').forEach(function (b) {
