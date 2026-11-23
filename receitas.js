@@ -10,7 +10,7 @@ var UNIDADES = {
 };
 
 var RECEITAS = {
-  1: { nome: 'Carpaccio de Salmão',
+  1: { nome: 'Carpaccio de Salmão', preco: 'R$ 90,00',
     passos: ['Com o salmão bem gelado e uma faca bem afiada, corte fatias finas e arrume no prato.', 'Espalhe a cebola roxa fatiada fina, as alcaparras e as raspas de limão.', 'Esprema metade do limão por cima, regue com azeite e tempere com sal e pimenta.', 'Deixe na geladeira até a hora de servir. Coloque a salsinha por cima.'],
     itens: [
       { n: 'Salmão fresco', q: 500, u: 'g', obs: 'em fatias', c: 'Carnes e peixes' },
@@ -22,7 +22,7 @@ var RECEITAS = {
       { n: 'Pimenta', q: null, c: 'Mercearia' },
       { n: 'Salsinha', q: 2, u: 'colher', obs: 'picada', c: 'Hortifrúti' }
     ] },
-  2: { nome: 'Tábua de Frios',
+  2: { nome: 'Tábua de Frios', preco: 'R$ 110,00',
     passos: ['Fatie os queijos e os salames.', 'Lave as uvas.', 'Arrume tudo na tábua.', 'Coloque o mel e as nozes.'],
     itens: [
       { n: 'Queijo brie', q: 150, u: 'g', c: 'Frios e laticínios' },
@@ -32,7 +32,7 @@ var RECEITAS = {
       { n: 'Mel', q: 3, u: 'colher', c: 'Mercearia' },
       { n: 'Nozes', q: 50, u: 'g', c: 'Mercearia' }
     ] },
-  3: { nome: 'Bruschetta de Pera e Gorgonzola',
+  3: { nome: 'Bruschetta de Pera e Gorgonzola', preco: 'R$ 50,00',
     passos: ['Ligue o forno a 180 °C. Corte o pão em fatias, coloque numa assadeira, regue com azeite e leve ao forno por 5 minutos, até ficar crocante.', 'Tire do forno e coloque a pera fatiada fina e o gorgonzola em pedaços sobre cada fatia.', 'Espalhe as nozes picadas.', 'Volte ao forno por mais 5 minutos, até o queijo derreter.'],
     itens: [
       { n: 'Pão italiano', q: 1, u: 'pao', obs: 'cerca de 10 fatias', c: 'Mercearia' },
@@ -41,7 +41,7 @@ var RECEITAS = {
       { n: 'Gorgonzola', q: 150, u: 'g', c: 'Frios e laticínios' },
       { n: 'Nozes', q: 50, u: 'g', c: 'Mercearia' }
     ] },
-  5: { nome: 'Entrecot',
+  5: { nome: 'Entrecot', preco: 'R$ 140,00',
     passos: ['Descasque a batata baroa, corte em pedaços e cozinhe em água com sal por cerca de 20 minutos, até ficar bem macia.', 'Escorra e amasse com o leite de coco aquecido e 30 g de manteiga até virar purê. Prove o sal e mantenha tampado.', 'Tempere os bifes com sal. Aqueça bem a frigideira com azeite e grelhe de 4 a 5 minutos de cada lado, virando só uma vez. Deixe descansar uns 5 minutos.', 'Na mesma frigideira, ferva o vinho tinto raspando o fundo, até reduzir quase pela metade (uns 5 minutos).', 'Desligue o fogo, junte 30 g de manteiga e misture até o molho ficar brilhante.', 'Sirva os bifes com o molho e o purê.'],
     itens: [
       { n: 'Bifes de entrecot', q: 1000, u: 'g', obs: '3 cm de espessura', c: 'Carnes e peixes' },
@@ -52,7 +52,7 @@ var RECEITAS = {
       { n: 'Leite de coco', q: 200, u: 'ml', obs: 'para o purê', c: 'Mercearia' },
       { n: 'Sal', q: null, c: 'Mercearia' }
     ] },
-  6: { nome: 'Vagem Salteada',
+  6: { nome: 'Vagem Salteada', preco: 'R$ 40,00',
     passos: ['Lave a vagem, corte as pontas e cozinhe em água fervente com sal por 3 a 4 minutos. Escorra.', 'Derreta a manteiga na frigideira e doure o alho por 1 minuto.', 'Junte a vagem e salteie por 2 a 3 minutos.', 'Tempere com sal e pimenta.', 'Finalize com as amêndoas e o manjericão.'],
     itens: [
       { n: 'Vagem', q: 500, u: 'g', c: 'Hortifrúti' },
@@ -63,7 +63,7 @@ var RECEITAS = {
       { n: 'Sal', q: null, c: 'Mercearia' },
       { n: 'Pimenta', q: null, c: 'Mercearia' }
     ] },
-  7: { nome: 'Ganache de Chocolate',
+  7: { nome: 'Ganache de Chocolate', preco: 'R$ 40,00',
     passos: ['Pique o chocolate em pedaços.', 'Aqueça o creme de leite na panela, sem ferver.', 'Com o creme bem quente, coloque o chocolate e misture até derreter.', 'Distribua nos bowls e leve à geladeira.', 'Sirva com morangos e raspas de chocolate.'],
     itens: [
       { n: 'Chocolate meio amargo', q: 150, u: 'g', c: 'Mercearia' },
