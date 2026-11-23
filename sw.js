@@ -1,10 +1,12 @@
-const CACHE_VERSION = '23.11.2026-0919';
+const CACHE_VERSION = '23.11.2026-0921';
 const CACHE_PREFIX = 'ceiadenatal-';
 const CACHE = CACHE_PREFIX + CACHE_VERSION;
 const BASE = '/ceiadenatal/';
 const ARQUIVOS = [
 BASE,
 BASE + 'index.html',
+BASE + 'mercado.html',
+BASE + 'receitas.js',
 BASE + 'manifest.json',
 BASE + 'icon-192.png',
 BASE + 'icon-512.png',
