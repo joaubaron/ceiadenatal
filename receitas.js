@@ -24,7 +24,7 @@ var RECEITAS = {
       { n: 'Pimenta', q: null, c: 'Mercearia' },
       { n: 'Salsinha', q: 2, u: 'colher', obs: 'picada', c: 'Hortifrúti' }
     ] },
-  2: { nome: 'Tábua de Frios', preco: 'R$ 110,00',
+  2: { nome: 'Tábua de Frios', preco: 'R$ 120,00',
     passos: ['Fatie os queijos e os salames.', 'Lave as uvas.', 'Arrume tudo na tábua.', 'Coloque o mel e as nozes.', 'Sirva com as torradas.'],
     itens: [
       { n: 'Queijo brie', q: 150, u: 'g', c: 'Frios e laticínios' },
