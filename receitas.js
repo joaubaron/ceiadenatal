@@ -25,19 +25,16 @@ var RECEITAS = {
       { n: 'Salsinha', q: 2, u: 'colher', obs: 'picada', c: 'Hortifrúti' }
     ] },
   2: { nome: 'Tábua de Frios', preco: 'R$ 120,00',
-    passos: ['Fatie o gouda e corte o brie e o queijo azul em pedaços.', 'Dobre o presunto cru e arrume os salames.', 'Lave as uvas e as outras frutas.', 'Ponha o mel num potinho, com o favo e uma colher de mel.', 'Arrume tudo na tábua, com as frutas e castanhas e os biscoitos. Enfeite com alecrim.'],
+    passos: ['Fatie o gouda e corte o brie e o queijo azul em pedaços.', 'Arrume os salames.', 'Lave as frutas.', 'Ponha o mel num potinho, com o favo e uma colher de mel.', 'Arrume tudo na tábua, com as frutas, nozes e os biscoitos. Enfeite com alecrim.'],
     itens: [
       { n: 'Queijo brie', q: 150, u: 'g', c: 'Frios e laticínios' },
       { n: 'Queijo gouda', q: 150, u: 'g', c: 'Frios e laticínios' },
       { n: 'Queijo azul', q: 100, u: 'g', obs: 'tipo gorgonzola', c: 'Frios e laticínios' },
-      { n: 'Presunto cru', q: 100, u: 'g', c: 'Frios e laticínios' },
       { n: 'Salames', q: 150, u: 'g', c: 'Frios e laticínios' },
-      { n: 'Uvas frescas', q: 300, u: 'g', obs: 'roxas e verdes', c: 'Hortifrúti' },
-      { n: 'Figo fresco', q: 2, u: 'un', c: 'Hortifrúti' },
+      { n: 'Frutas frescas', q: 300, u: 'g', obs: 'roxas e verdes', c: 'Hortifrúti' },
       { n: 'Mel', q: 3, u: 'colher', c: 'Mercearia' },
       { n: 'Favo de mel', q: 1, u: 'un', obs: 'um pedaço, se achar', c: 'Mercearia' },
       { n: 'Nozes', q: 50, u: 'g', c: 'Mercearia' },
-      { n: 'Pistache', q: 30, u: 'g', c: 'Mercearia' },
       { n: 'Biscoitos', q: 1, u: 'pacote', obs: 'tipo água e sal', c: 'Mercearia' },
       { n: 'Alecrim fresco', q: 2, u: 'un', obs: 'raminhos, para enfeitar', c: 'Hortifrúti' }
     ] },
