@@ -45,12 +45,12 @@ var RECEITAS = {
       { n: 'Nozes', q: 50, u: 'g', c: 'Mercearia' }
     ] },
   5: { nome: 'Entrecot', preco: 'R$ 140,00',
-    passos: ['Faça antes: descasque a batata baroa, corte em pedaços e cozinhe em água com sal por cerca de 20 minutos, até ficar bem macia.', 'Escorra e amasse com o leite de coco aquecido e 30 g de manteiga até virar purê. Prove o sal e mantenha tampado.', 'Tempere os bifes com sal. Aqueça bem a frigideira com azeite e grelhe de 4 a 5 minutos de cada lado, virando só uma vez. Faça em 2 ou 3 levas, sem encher a frigideira. Deixe descansar uns 5 minutos, embrulhados em papel alumínio no forno morno (80 °C).', 'Na mesma frigideira, ferva o vinho tinto raspando o fundo, até reduzir quase pela metade (uns 5 minutos).', 'Desligue o fogo, junte 30 g de manteiga e misture até o molho ficar brilhante.', 'Sirva os bifes com o molho e o purê.'],
+    passos: ['Faça antes: descasque a batata baroa, corte em pedaços e cozinhe em água com sal por cerca de 20 minutos, até ficar bem macia.', 'Escorra e amasse com o leite de coco aquecido e 2 colheres de sopa de manteiga até virar purê. Prove o sal e mantenha tampado.', 'Tempere os bifes com sal. Aqueça bem a frigideira com azeite e grelhe de 4 a 5 minutos de cada lado, virando só uma vez. Faça em 2 ou 3 levas, sem encher a frigideira. Deixe descansar uns 5 minutos, embrulhados em papel alumínio no forno morno (80 °C).', 'Na mesma frigideira, ferva o vinho tinto raspando o fundo, até reduzir quase pela metade (uns 5 minutos).', 'Desligue o fogo, junte 2 colheres de sopa de manteiga e misture até o molho ficar brilhante.', 'Sirva os bifes com o molho e o purê.'],
     itens: [
       { n: 'Bifes de entrecot', q: 1000, u: 'g', obs: '3 cm de espessura', c: 'Carnes e peixes' },
       { n: 'Azeite', q: 2, u: 'colher', c: 'Mercearia' },
       { n: 'Vinho tinto (para o molho)', q: 250, u: 'ml', obs: 'pode ser da garrafa da mesa', c: 'Bebidas' },
-      { n: 'Manteiga', q: 60, u: 'g', obs: '30 g no molho e 30 g no purê', c: 'Frios e laticínios' },
+      { n: 'Manteiga', q: 4, u: 'colher', obs: '2 colheres no molho e 2 no purê', c: 'Frios e laticínios' },
       { n: 'Batata baroa', q: 1000, u: 'g', obs: 'para o purê', c: 'Hortifrúti' },
       { n: 'Leite de coco', q: 200, u: 'ml', obs: 'para o purê', c: 'Mercearia' },
       { n: 'Sal', q: null, c: 'Mercearia' }
