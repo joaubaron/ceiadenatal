@@ -59,11 +59,12 @@ var RECEITAS = {
       { n: 'Sal', q: null, c: 'Mercearia' }
     ] },
   6: { nome: 'Vagem Salteada', preco: 'R$ 40,00',
-    passos: ['Lave a vagem, corte as pontas e cozinhe em água fervente com sal por 3 a 4 minutos. Escorra. Pode fazer antes: passe em água gelada e guarde na geladeira.', 'Derreta a manteiga na frigideira e doure o alho por 1 minuto.', 'Junte a vagem e salteie por 2 a 3 minutos.', 'Tempere com sal e pimenta.', 'Finalize com as amêndoas.'],
+    passos: ['Lave a vagem, corte as pontas e cozinhe em água fervente com sal por 3 a 4 minutos. Escorra. Pode fazer antes: passe em água gelada e guarde na geladeira.', 'Derreta a manteiga na frigideira e doure o alho por 1 minuto.', 'Junte a vagem e salteie por 2 a 3 minutos.', 'Tempere com sal e pimenta.', 'Finalize com as amêndoas e limão.'],
     itens: [
       { n: 'Vagem', q: 500, u: 'g', c: 'Hortifrúti' },
       { n: 'Manteiga', q: 2, u: 'colher', c: 'Frios e laticínios' },
       { n: 'Alho', q: 2, u: 'dente', c: 'Hortifrúti' },
+      { n: 'Limão', q: 1, u: 'unidade', c: 'Hortifrúti' },
       { n: 'Amêndoas laminadas', q: 50, u: 'g', c: 'Mercearia' },
       { n: 'Sal', q: null, c: 'Mercearia' },
       { n: 'Pimenta', q: null, c: 'Mercearia' }
