@@ -24,8 +24,8 @@ var RECEITAS = {
       { n: 'Pimenta', q: null, c: 'Mercearia' },
       { n: 'Salsinha', q: 2, u: 'colher', obs: 'picada', c: 'Hortifrúti' }
     ] },
-    2: { nome: 'Tábua de Frios', preco: 'R$ 120,00',
-    passos: ['Fatie o gouda e corte o brie e o queijo azul em pedaços.', 'Dobre o presunto cru e arrume os salames.', 'Lave as uvas e corte os figos ao meio.', 'Ponha o mel num potinho, com o favo e uma colher de mel.', 'Arrume tudo na tábua, com as nozes, o pistache e os biscoitos. Enfeite com alecrim.'],
+  2: { nome: 'Tábua de Frios', preco: 'R$ 120,00',
+    passos: ['Fatie o gouda e corte o brie e o queijo azul em pedaços.', 'Dobre o presunto cru e arrume os salames.', 'Lave as uvas e as outras frutas.', 'Ponha o mel num potinho, com o favo e uma colher de mel.', 'Arrume tudo na tábua, com as frutas e castanhas e os biscoitos. Enfeite com alecrim.'],
     itens: [
       { n: 'Queijo brie', q: 150, u: 'g', c: 'Frios e laticínios' },
       { n: 'Queijo gouda', q: 150, u: 'g', c: 'Frios e laticínios' },
