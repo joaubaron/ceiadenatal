@@ -24,16 +24,22 @@ var RECEITAS = {
       { n: 'Pimenta', q: null, c: 'Mercearia' },
       { n: 'Salsinha', q: 2, u: 'colher', obs: 'picada', c: 'Hortifrúti' }
     ] },
-  2: { nome: 'Tábua de Frios', preco: 'R$ 120,00',
-    passos: ['Fatie os queijos e os salames.', 'Lave as uvas.', 'Arrume tudo na tábua.', 'Coloque o mel e as nozes.', 'Sirva com as torradas.'],
+    2: { nome: 'Tábua de Frios', preco: 'R$ 120,00',
+    passos: ['Fatie o gouda e corte o brie e o queijo azul em pedaços.', 'Dobre o presunto cru e arrume os salames.', 'Lave as uvas e corte os figos ao meio.', 'Ponha o mel num potinho, com o favo e uma colher de mel.', 'Arrume tudo na tábua, com as nozes, o pistache e os biscoitos. Enfeite com alecrim.'],
     itens: [
       { n: 'Queijo brie', q: 150, u: 'g', c: 'Frios e laticínios' },
       { n: 'Queijo gouda', q: 150, u: 'g', c: 'Frios e laticínios' },
+      { n: 'Queijo azul', q: 100, u: 'g', obs: 'tipo gorgonzola', c: 'Frios e laticínios' },
+      { n: 'Presunto cru', q: 100, u: 'g', c: 'Frios e laticínios' },
       { n: 'Salames', q: 150, u: 'g', c: 'Frios e laticínios' },
-      { n: 'Uvas frescas', q: 300, u: 'g', c: 'Hortifrúti' },
+      { n: 'Uvas frescas', q: 300, u: 'g', obs: 'roxas e verdes', c: 'Hortifrúti' },
+      { n: 'Figo fresco', q: 2, u: 'un', c: 'Hortifrúti' },
       { n: 'Mel', q: 3, u: 'colher', c: 'Mercearia' },
+      { n: 'Favo de mel', q: 1, u: 'un', obs: 'um pedaço, se achar', c: 'Mercearia' },
       { n: 'Nozes', q: 50, u: 'g', c: 'Mercearia' },
-      { n: 'Torradas', q: 1, u: 'pacote', obs: 'para acompanhar', c: 'Mercearia' }
+      { n: 'Pistache', q: 30, u: 'g', c: 'Mercearia' },
+      { n: 'Biscoitos', q: 1, u: 'pacote', obs: 'tipo água e sal', c: 'Mercearia' },
+      { n: 'Alecrim fresco', q: 2, u: 'un', obs: 'raminhos, para enfeitar', c: 'Hortifrúti' }
     ] },
   3: { nome: 'Bruschetta de Pera e Gorgonzola', preco: 'R$ 50,00',
     passos: ['Ligue o forno a 180 °C. Corte o pão em fatias, coloque numa assadeira, regue com azeite e leve ao forno por 5 minutos, até ficar crocante.', 'Tire do forno e coloque a pera fatiada fina e o gorgonzola em pedaços sobre cada fatia.', 'Espalhe as nozes picadas.', 'Volte ao forno por mais 5 minutos, até o queijo derreter.'],
