@@ -44,7 +44,7 @@ var RECEITAS = {
       { n: 'Pera', q: 2, u: 'un', c: 'Hortifrúti' },
       { n: 'Gorgonzola', q: 150, u: 'g', c: 'Frios e laticínios' },
       { n: 'Nozes', q: 50, u: 'g', c: 'Mercearia' },
-      { n: 'Manjericão fresco', q: 10, u: 'folhas', obs: 'para finalizar', c: 'Hortifrúti' }
+      { n: 'Manjericão fresco', q: 30, u: 'folhas', obs: 'para finalizar', c: 'Hortifrúti' }
     ] },
   5: { nome: 'Entrecot', preco: 'R$ 140,00',
     passos: ['Faça antes: descasque a batata baroa, corte em pedaços e cozinhe em água com sal por cerca de 20 minutos, até ficar bem macia.', 'Escorra e amasse com o leite de coco aquecido e 2 colheres de sopa de manteiga até virar purê. Prove o sal e mantenha tampado.', 'Corte 5 bifes de 3 cm de espessura. Tempere com sal. Aqueça bem a frigideira com azeite e grelhe de 4 a 5 minutos de cada lado, virando só uma vez. Faça em 2 ou 3 levas, sem encher a frigideira.', 'Na mesma frigideira, ferva o vinho tinto raspando o fundo, até reduzir quase pela metade (uns 5 minutos).', 'Desligue o fogo, junte 2 colheres de sopa de manteiga e misture até o molho ficar brilhante.', 'Sirva os bifes com o molho e o purê. Decore cada bife com um raminho de alecrim fresco.'],
