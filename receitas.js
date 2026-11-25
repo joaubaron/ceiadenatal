@@ -64,7 +64,7 @@ var RECEITAS = {
       { n: 'Vagem', q: 500, u: 'g', c: 'Hortifrúti' },
       { n: 'Manteiga', q: 2, u: 'colher', c: 'Frios e laticínios' },
       { n: 'Alho', q: 2, u: 'dente', c: 'Hortifrúti' },
-      { n: 'Limão', q: 1, u: 'unidade', c: 'Hortifrúti' },
+      { n: 'Limão', q: 1, u: 'un', c: 'Hortifrúti' },
       { n: 'Amêndoas laminadas', q: 50, u: 'g', c: 'Mercearia' },
       { n: 'Sal', q: null, c: 'Mercearia' },
       { n: 'Pimenta', q: null, c: 'Mercearia' }
