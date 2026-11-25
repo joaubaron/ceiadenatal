@@ -12,7 +12,7 @@ var UNIDADES = {
 
 var RECEITAS = {
   1: { nome: 'Carpaccio de Salmão', preco: 'R$ 90,00',
-    passos: ['Deixe o salmão uns 20 minutos no freezer para firmar. Com uma faca bem afiada, corte fatias finas e arrume no prato.', 'Espalhe a cebola roxa fatiada fina, as alcaparras e as raspas de limão.', 'Esprema metade do limão por cima, regue com azeite e tempere com sal e pimenta.', 'Deixe na geladeira até a hora de servir. Coloque a salsinha por cima e sirva.'],
+    passos: ['Deixe o salmão uns 20 minutos no freezer para firmar. Com uma faca bem afiada, corte fatias finas e arrume no prato.', 'Espalhe a cebola roxa fatiada fina, as alcaparras e as raspas de limão.', 'Esprema metade do limão por cima, regue com azeite e tempere com sal e pimenta.', 'Deixe na geladeira até servir. Coloque salsinha e cebola por cima e sirva.'],
     itens: [
       { n: 'Salmão fresco', q: 500, u: 'g', obs: 'em fatias', c: 'Carnes e peixes' },
       { n: 'Azeite', q: 3, u: 'colher', c: 'Mercearia' },
@@ -47,7 +47,7 @@ var RECEITAS = {
       { n: 'Manjericão fresco', q: 30, u: 'folhas', obs: 'para finalizar', c: 'Hortifrúti' }
     ] },
   5: { nome: 'Entrecot', preco: 'R$ 140,00',
-    passos: ['Faça antes: descasque a batata baroa, corte em pedaços e cozinhe em água com sal por cerca de 20 minutos, até ficar bem macia.', 'Escorra e amasse com o leite de coco aquecido e 2 colheres de sopa de manteiga até virar purê. Prove o sal e mantenha tampado.', 'Corte 5 bifes de 3 cm de espessura. Tempere com sal. Aqueça bem a frigideira com azeite e grelhe de 4 a 5 minutos de cada lado, virando só uma vez. Faça em 2 ou 3 levas, sem encher a frigideira.', 'Na mesma frigideira, ferva o vinho tinto raspando o fundo, até reduzir quase pela metade (uns 5 minutos).', 'Desligue o fogo, junte 2 colheres de sopa de manteiga e misture até o molho ficar brilhante.', 'Sirva os bifes com o molho e o purê. Decore cada bife com um raminho de alecrim fresco.'],
+    passos: ['Faça antes: descasque a batata baroa, corte em pedaços e cozinhe em água com sal por cerca de 20 minutos, até ficar bem macia.', 'Escorra e amasse com o leite de coco aquecido e 2 colheres de sopa de manteiga até virar purê. Prove o sal e mantenha tampado.', 'Corte 5 bifes de 3 cm de espessura. Tempere com sal. Aqueça bem a frigideira com azeite e grelhe de 4 a 5 minutos de cada lado, virando só uma vez.', 'Na mesma frigideira, ferva o vinho tinto raspando o fundo, até reduzir quase pela metade (uns 5 minutos).', 'Desligue o fogo, junte 2 colheres de sopa de manteiga e misture até o molho ficar brilhante.', 'Sirva os bifes com o molho e o purê. Decore cada bife com um raminho de alecrim fresco.'],
     itens: [
       { n: 'Bifes de entrecot', q: 1000, u: 'g', obs: '3 cm de espessura', c: 'Carnes e peixes' },
       { n: 'Azeite', q: 2, u: 'colher', c: 'Mercearia' },
