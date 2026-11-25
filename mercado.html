@@ -451,7 +451,7 @@ caixa.appendChild(ul);
 caixa.appendChild(criarTitulo('Bebidas'));
 var ub = el('ul');
 BEBIDAS.forEach(function (b) {
-ub.appendChild(criarItem(b.n, '', b.obs));
+ub.appendChild(criarItem(b.n, formatarQtd(b.q, b.u), b.obs));
 });
 caixa.appendChild(ub);
 }
