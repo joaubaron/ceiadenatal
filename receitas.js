@@ -39,13 +39,14 @@ var RECEITAS = {
       { n: 'Alecrim fresco', q: 2, u: 'un', obs: 'raminhos, para enfeitar', c: 'Hortifrúti' }
     ] },
   3: { nome: 'Bruschetta de Pera e Gorgonzola', preco: 'R$ 50,00',
-    passos: ['Ligue o forno a 180 °C. Corte o pão em fatias, coloque numa assadeira, regue com azeite e leve ao forno por 5 minutos, até ficar crocante.', 'Tire do forno e coloque a pera fatiada fina e o gorgonzola em pedaços sobre cada fatia.', 'Espalhe as nozes picadas.', 'Volte ao forno por mais 5 minutos, até o queijo derreter.'],
+    passos: ['Ligue o forno a 180 °C. Corte o pão em fatias, coloque numa assadeira, regue com azeite e leve ao forno por 5 minutos, até ficar crocante.', 'Tire do forno e coloque a pera fatiada fina e o gorgonzola em pedaços sobre cada fatia.', 'Espalhe as nozes picadas.', 'Volte ao forno por mais 5 minutos, até o queijo derreter.', 'Tire do forno e finalize com folhas de manjericão fresco por cima, na hora de servir.'],
     itens: [
       { n: 'Pão italiano', q: 1, u: 'pao', obs: 'cerca de 10 fatias', c: 'Mercearia' },
       { n: 'Azeite', q: 2, u: 'colher', c: 'Mercearia' },
       { n: 'Pera', q: 2, u: 'un', c: 'Hortifrúti' },
       { n: 'Gorgonzola', q: 150, u: 'g', c: 'Frios e laticínios' },
-      { n: 'Nozes', q: 50, u: 'g', c: 'Mercearia' }
+      { n: 'Nozes', q: 50, u: 'g', c: 'Mercearia' },
+      { n: 'Manjericão fresco', q: 1, u: 'maço', obs: 'só as folhas, para finalizar', c: 'Hortifrúti' }
     ] },
   5: { nome: 'Entrecot', preco: 'R$ 140,00',
     passos: ['Faça antes: descasque a batata baroa, corte em pedaços e cozinhe em água com sal por cerca de 20 minutos, até ficar bem macia.', 'Escorra e amasse com o leite de coco aquecido e 2 colheres de sopa de manteiga até virar purê. Prove o sal e mantenha tampado.', 'Corte 5 bifes de 3 cm de espessura. Tempere com sal. Aqueça bem a frigideira com azeite e grelhe de 4 a 5 minutos de cada lado, virando só uma vez. Faça em 2 ou 3 levas, sem encher a frigideira.', 'Na mesma frigideira, ferva o vinho tinto raspando o fundo, até reduzir quase pela metade (uns 5 minutos).', 'Desligue o fogo, junte 2 colheres de sopa de manteiga e misture até o molho ficar brilhante.', 'Sirva os bifes com o molho e o purê. Decore cada bife com um raminho de alecrim fresco.'],
