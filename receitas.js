@@ -25,7 +25,7 @@ var RECEITAS = {
       { n: 'Salsinha', q: 2, u: 'colher', obs: 'picada', c: 'Hortifrúti' }
     ] },
   2: { nome: 'Tábua de Frios', preco: 'R$ 120,00',
-    passos: ['Fatie o gouda e corte o brie em pedaços.', 'Arrume os salames.', 'Lave as frutas.', 'Ponha o mel num potinho, com o favo e uma colher de mel.', 'Arrume tudo na tábua, com as frutas, nozes e os biscoitos. Enfeite com alecrim.'],
+    passos: ['Fatie o gouda e corte o brie em pedaços.', 'Arrume os salames.', 'Lave as frutas.', 'Ponha o mel num potinho, com o favo e uma colher para servir.', 'Arrume tudo na tábua, com as frutas, nozes e os biscoitos. Enfeite com alecrim.'],
     itens: [
       { n: 'Queijo brie', q: 150, u: 'g', c: 'Frios e laticínios' },
       { n: 'Queijo gouda', q: 150, u: 'g', c: 'Frios e laticínios' },
@@ -45,14 +45,14 @@ var RECEITAS = {
       { n: 'Pera', q: 2, u: 'un', c: 'Hortifrúti' },
       { n: 'Gorgonzola', q: 150, u: 'g', c: 'Frios e laticínios' },
       { n: 'Nozes', q: 50, u: 'g', c: 'Mercearia' },
-      { n: 'Manjericão fresco', q: 1, u: 'maço', obs: 'só as folhas, para finalizar', c: 'Hortifrúti' }
+      { n: 'Manjericão fresco', q: 1, u: 'punhado', obs: 'de folhas, para finalizar', c: 'Hortifrúti' }
     ] },
   5: { nome: 'Entrecot', preco: 'R$ 140,00',
     passos: ['Faça antes: descasque a batata baroa, corte em pedaços e cozinhe em água com sal por cerca de 20 minutos, até ficar bem macia.', 'Escorra e amasse com o leite de coco aquecido e 2 colheres de sopa de manteiga até virar purê. Prove o sal e mantenha tampado.', 'Corte 5 bifes de 3 cm de espessura. Tempere com sal. Aqueça bem a frigideira com azeite e grelhe de 4 a 5 minutos de cada lado, virando só uma vez. Faça em 2 ou 3 levas, sem encher a frigideira.', 'Na mesma frigideira, ferva o vinho tinto raspando o fundo, até reduzir quase pela metade (uns 5 minutos).', 'Desligue o fogo, junte 2 colheres de sopa de manteiga e misture até o molho ficar brilhante.', 'Sirva os bifes com o molho e o purê. Decore cada bife com um raminho de alecrim fresco.'],
     itens: [
       { n: 'Bifes de entrecot', q: 1000, u: 'g', obs: '3 cm de espessura', c: 'Carnes e peixes' },
       { n: 'Azeite', q: 2, u: 'colher', c: 'Mercearia' },
-      { n: 'Vinho tinto (para o molho)', q: 250, u: 'ml', obs: 'pode ser da garrafa da mesa', c: 'Bebidas' },
+      { n: 'Vinho tinto (para o molho)', q: 250, u: 'ml', obs: 'separado do vinho da mesa', c: 'Bebidas' },
       { n: 'Manteiga', q: 4, u: 'colher', obs: '2 colheres no molho e 2 no purê', c: 'Frios e laticínios' },
       { n: 'Batata baroa', q: 1000, u: 'g', obs: 'para o purê', c: 'Hortifrúti' },
       { n: 'Leite de coco', q: 200, u: 'ml', obs: 'para o purê', c: 'Mercearia' },
@@ -60,18 +60,17 @@ var RECEITAS = {
       { n: 'Sal', q: null, c: 'Mercearia' }
     ] },
   6: { nome: 'Vagem Salteada', preco: 'R$ 40,00',
-    passos: ['Lave a vagem, corte as pontas e cozinhe em água fervente com sal por 3 a 4 minutos. Escorra. Pode fazer antes: passe em água gelada e guarde na geladeira.', 'Derreta a manteiga na frigideira e doure o alho por 1 minuto.', 'Junte a vagem e salteie por 2 a 3 minutos.', 'Tempere com sal e pimenta.', 'Finalize com as amêndoas e o manjericão.'],
+    passos: ['Lave a vagem, corte as pontas e cozinhe em água fervente com sal por 3 a 4 minutos. Escorra. Pode fazer antes: passe em água gelada e guarde na geladeira.', 'Derreta a manteiga na frigideira e doure o alho por 1 minuto.', 'Junte a vagem e salteie por 2 a 3 minutos.', 'Tempere com sal e pimenta.', 'Finalize com as amêndoas.'],
     itens: [
       { n: 'Vagem', q: 500, u: 'g', c: 'Hortifrúti' },
       { n: 'Manteiga', q: 2, u: 'colher', c: 'Frios e laticínios' },
       { n: 'Alho', q: 2, u: 'dente', c: 'Hortifrúti' },
       { n: 'Amêndoas laminadas', q: 50, u: 'g', c: 'Mercearia' },
-      { n: 'Manjericão fresco', q: 1, u: 'punhado', obs: 'de folhas', c: 'Hortifrúti' },
       { n: 'Sal', q: null, c: 'Mercearia' },
       { n: 'Pimenta', q: null, c: 'Mercearia' }
     ] },
   7: { nome: 'Ganache de Chocolate', preco: 'R$ 40,00',
-    passos: ['Pique o chocolate em pedaços.', 'Aqueça o creme de leite na panela, sem ferver.', 'Com o creme bem quente, coloque o chocolate e misture até derreter.', 'Distribua nos bowls e leve à geladeira.', 'Sirva com morangos e raspas de chocolate.'],
+    passos: ['Pique o chocolate em pedaços. Separe um pedacinho para as raspas.', 'Aqueça o creme de leite na panela, sem ferver.', 'Com o creme bem quente, coloque o chocolate e misture até derreter.', 'Distribua nos bowls e leve à geladeira.', 'Sirva com morangos e as raspas do chocolate reservado.'],
     itens: [
       { n: 'Chocolate meio amargo', q: 200, u: 'g', c: 'Mercearia' },
       { n: 'Creme de leite', q: 200, u: 'g', obs: 'uma caixinha, aquecido', c: 'Frios e laticínios' },
