@@ -35,7 +35,7 @@ var RECEITAS = {
       { n: 'Favo de mel', q: 1, u: 'un', obs: 'um pedaço', c: 'Mercearia' },
       { n: 'Nozes', q: 50, u: 'g', c: 'Mercearia' },
       { n: 'Biscoitos', q: 1, u: 'pacote', obs: 'tipo água e sal', c: 'Mercearia' },
-      { n: 'Alecrim fresco', q: 2, u: 'un', obs: 'raminhos, para enfeitar', c: 'Hortifrúti' }
+      { n: 'Alecrim fresco', q: 2, u: 'un', obs: 'para enfeitar', c: 'Hortifrúti' }
     ] },
   3: { nome: 'Bruschetta de Pera e Gorgonzola', preco: 'R$ 50,00',
     passos: ['Ligue o forno a 180 °C. Corte o pão em fatias, coloque numa assadeira, regue com azeite e leve ao forno por 5 minutos, até ficar crocante.', 'Tire do forno e coloque a pera fatiada fina e o gorgonzola em pedaços sobre cada fatia.', 'Espalhe as nozes picadas.', 'Volte ao forno por mais 5 minutos, até o queijo derreter.', 'Tire do forno e finalize com folhas de manjericão fresco por cima, na hora de servir.'],
