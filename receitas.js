@@ -32,7 +32,7 @@ var RECEITAS = {
       { n: 'Salames', q: 150, u: 'g', c: 'Frios e laticínios' },
       { n: 'Frutas frescas', q: 300, u: 'g', obs: 'roxas e verdes', c: 'Hortifrúti' },
       { n: 'Mel', q: 3, u: 'colher', c: 'Mercearia' },
-      { n: 'Favo de mel', q: 1, u: 'un', obs: 'um pedaço, se achar', c: 'Mercearia' },
+      { n: 'Favo de mel', q: 1, u: 'un', obs: 'um pedaço', c: 'Mercearia' },
       { n: 'Nozes', q: 50, u: 'g', c: 'Mercearia' },
       { n: 'Biscoitos', q: 1, u: 'pacote', obs: 'tipo água e sal', c: 'Mercearia' },
       { n: 'Alecrim fresco', q: 2, u: 'un', obs: 'raminhos, para enfeitar', c: 'Hortifrúti' }
@@ -45,7 +45,7 @@ var RECEITAS = {
       { n: 'Pera', q: 2, u: 'un', c: 'Hortifrúti' },
       { n: 'Gorgonzola', q: 150, u: 'g', c: 'Frios e laticínios' },
       { n: 'Nozes', q: 50, u: 'g', c: 'Mercearia' },
-      { n: 'Manjericão fresco', q: 1, u: 'punhado', obs: 'de folhas, para finalizar', c: 'Hortifrúti' }
+      { n: 'Manjericão fresco', q: 1, u: 'folhas', obs: 'para finalizar', c: 'Hortifrúti' }
     ] },
   5: { nome: 'Entrecot', preco: 'R$ 140,00',
     passos: ['Faça antes: descasque a batata baroa, corte em pedaços e cozinhe em água com sal por cerca de 20 minutos, até ficar bem macia.', 'Escorra e amasse com o leite de coco aquecido e 2 colheres de sopa de manteiga até virar purê. Prove o sal e mantenha tampado.', 'Corte 5 bifes de 3 cm de espessura. Tempere com sal. Aqueça bem a frigideira com azeite e grelhe de 4 a 5 minutos de cada lado, virando só uma vez. Faça em 2 ou 3 levas, sem encher a frigideira.', 'Na mesma frigideira, ferva o vinho tinto raspando o fundo, até reduzir quase pela metade (uns 5 minutos).', 'Desligue o fogo, junte 2 colheres de sopa de manteiga e misture até o molho ficar brilhante.', 'Sirva os bifes com o molho e o purê. Decore cada bife com um raminho de alecrim fresco.'],
@@ -56,7 +56,7 @@ var RECEITAS = {
       { n: 'Manteiga', q: 4, u: 'colher', obs: '2 colheres no molho e 2 no purê', c: 'Frios e laticínios' },
       { n: 'Batata baroa', q: 1000, u: 'g', obs: 'para o purê', c: 'Hortifrúti' },
       { n: 'Leite de coco', q: 200, u: 'ml', obs: 'para o purê', c: 'Mercearia' },
-      { n: 'Alecrim fresco', q: 5, u: 'un', obs: 'raminhos, para decorar', c: 'Hortifrúti' },
+      { n: 'Alecrim fresco', q: 5, u: 'un', obs: 'para decorar', c: 'Hortifrúti' },
       { n: 'Sal', q: null, c: 'Mercearia' }
     ] },
   6: { nome: 'Vagem Salteada', preco: 'R$ 40,00',
