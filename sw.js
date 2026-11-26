@@ -18,6 +18,7 @@ BASE + 'fotos/foto6.webp',
 BASE + 'fotos/foto7.webp'
 ];
 
+
 self.addEventListener('install', (e) => {
 e.waitUntil(
 caches.open(CACHE).then((c) =>
