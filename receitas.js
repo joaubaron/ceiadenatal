@@ -12,16 +12,16 @@ var UNIDADES = {
 
 var RECEITAS = {
   1: { nome: 'Carpaccio de Salmão', preco: 'R$ 90,00',
-    passos: ['Deixe o salmão uns 20 minutos no freezer para firmar. Com uma faca bem afiada, corte fatias finas e arrume no prato.', 'Espalhe a cebola roxa fatiada fina, as alcaparras e as raspas de limão.', 'Esprema metade do limão por cima, regue com azeite e tempere com sal e pimenta.', 'Deixe na geladeira até servir. Coloque salsinha e cebola por cima e sirva.'],
+    passos: ['Deixe o salmão uns 20 minutos no freezer para firmar. Com uma faca bem afiada, corte fatias finas e arrume no prato.', 'Espalhe a cebola roxa fatiada fina, as alcaparras e as raspas de limão.', 'Esprema metade do limão por cima, regue com azeite e fios de vinagre balsâmico. Tempere com sal e pimenta.', 'Deixe na geladeira até servir.'],
     itens: [
       { n: 'Salmão fresco', q: 500, u: 'g', obs: 'em fatias', c: 'Carnes e peixes' },
       { n: 'Azeite', q: 3, u: 'colher', c: 'Mercearia' },
+      { n: 'Vinagre balsâmico', q: 1, u: 'colher', c: 'Mercearia' },
       { n: 'Limão', q: 1, u: 'un', obs: 'raspas e suco', c: 'Hortifrúti' },
       { n: 'Alcaparras', q: 2, u: 'colher', c: 'Mercearia' },
       { n: 'Cebola roxa', q: 1, u: 'un', obs: 'pequena', c: 'Hortifrúti' },
       { n: 'Sal', q: null, c: 'Mercearia' },
-      { n: 'Pimenta', q: null, c: 'Mercearia' },
-      { n: 'Salsinha', q: 2, u: 'colher', obs: 'picada', c: 'Hortifrúti' }
+      { n: 'Pimenta', q: null, c: 'Mercearia' }
     ] },
   2: { nome: 'Tábua de Frios', preco: 'R$ 120,00',
     passos: ['Fatie o gouda e corte o brie em pedaços.', 'Arrume os salames.', 'Lave as frutas.', 'Ponha o mel num potinho, com o favo e uma colher para servir.', 'Arrume tudo na tábua, com as frutas, nozes e os biscoitos. Enfeite com alecrim.'],
