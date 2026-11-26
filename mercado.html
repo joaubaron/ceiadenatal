@@ -483,5 +483,12 @@ desenhar();
 })();
 </script>
 
+<script>
+if ('serviceWorker' in navigator) {
+window.addEventListener('load', function () {
+navigator.serviceWorker.register('/ceiadenatal/sw.js', { scope: '/ceiadenatal/' }).catch(function () {});
+});
+}
+</script>
 </body>
 </html>
