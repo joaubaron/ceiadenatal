@@ -1,4 +1,4 @@
-const CACHE_VERSION = '26.11.2026-0816';
+const CACHE_VERSION = '26.11.2026-0815';
 const CACHE_PREFIX = 'ceiadenatal-';
 const CACHE = CACHE_PREFIX + CACHE_VERSION;
 const BASE = '/ceiadenatal/';
@@ -13,11 +13,9 @@ BASE + 'icon-512.png',
 BASE + 'fotos/foto1.webp',
 BASE + 'fotos/foto2.webp',
 BASE + 'fotos/foto3.webp',
-BASE + 'fotos/foto4.webp',
 BASE + 'fotos/foto5.webp',
 BASE + 'fotos/foto6.webp',
-BASE + 'fotos/foto7.webp',
-BASE + 'fotos/foto8.webp'
+BASE + 'fotos/foto7.webp'
 ];
 
 self.addEventListener('install', (e) => {
